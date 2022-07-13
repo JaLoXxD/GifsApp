@@ -1,6 +1,4 @@
-import React from "react";
-
-export const GiftItem = ({title, url}) => {
+export const GifItem = ({title, url}) => {
 	return (
 		<>
 			<img src={url.url} alt={title} />

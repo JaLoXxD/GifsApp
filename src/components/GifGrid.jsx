@@ -1,9 +1,9 @@
-import { GiftItem } from "./GiftItem";
+import { GifItem } from "./GifItem";
 
-import { useFetchGifts } from "../hooks/useFetchGifts";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GifGrid = ({ category }) => {
-	const { gifts, isLoading } = useFetchGifts(category);
+	const { gifts, isLoading } = useFetchGifs(category);
 
 	return (
 		<>
@@ -12,10 +12,10 @@ export const GifGrid = ({ category }) => {
 			{isLoading && <h2>Loading...</h2>}
 
 			<div className="gifsGrid">
-				{gifts.map((gift) => {
+				{gifts.map((gif) => {
 					return (
-						<div className="gifCard" key={gift.id}>
-							<GiftItem {...gift} />
+						<div className="gifCard" key={gif.id}>
+							<GifItem {...gif} />
 						</div>
 					);
 				})}

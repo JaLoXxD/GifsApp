@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { getGifs } from "../helpers/getGifts";
+import { getGifs } from "../helpers/getGif";
 
-export const useFetchGifts = (category) => {
+export const useFetchGifs = (category) => {
 	const [gifts, setGifts] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
